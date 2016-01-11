@@ -55,6 +55,10 @@
 
 #4.0 Tesztelés
 
+Ember.js-hez van telepítve saját tesztelő program (Phantomjs), mellyel könnyedén lehet ellenőrizni az oldalunk müködését
+
+Az oldalon nicnsenek nem müködő funkciók, minden résznek megvan a maga szerepe.
+
 #5.0 Felhasználási dokumentáció
 
 
