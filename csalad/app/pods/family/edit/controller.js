@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
             let member = this.get('model');
             member.setProperties(formData);
             return member.save().then(() => {
-                this.transitionToRoute('member.list');
+                this.transitionToRoute('family.list');
             });
         }
     }

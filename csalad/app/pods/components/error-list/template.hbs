@@ -3,24 +3,22 @@
         <tr>
             <th>Időpont</th>
             <th>Státusz</th>
-            <th>Helyszín</th>
-            <th>Leírás</th>
+            <th>Teendő</th>
             <th>Funkciók</th>
         </tr>   
     </thead>
     <tbody>
 
-        {{#each errors}}
+        {{#each errors as |error|}}
         <tr>
             {{!--{{log this}}--}}
-            <td>{{date}}</td>
-            <td><span class="label label-success">{{status}}</span></td>
-            <td>{{location}}</td>
-            <td>{{description}}</td>
+            <td>{{error.date}}</td>
+            <td><span class="label label-success">{{error.status}}</span></td>
+            <td>{{error.todo}}</td>
             <td>
-                {{link-to "Megtekint" "errors.view" this class="btn btn-default btn-sm"}}
-                {{link-to "Szerkeszt" "errors.edit" this class="btn btn-default btn-sm"}}
-                <button {{action "deleteError" this}} class="btn btn-default btn-sm">Töröl</button>
+                {{link-to "Megtekint" "errors.view" error class="btn btn-default btn-sm"}}
+                {{link-to "Szerkeszt" "errors.edit" error class="btn btn-default btn-sm"}}
+                <button {{action "deleteError" error}} class="btn btn-default btn-sm">Töröl</button>
             </td>
         </tr>
         {{/each}}

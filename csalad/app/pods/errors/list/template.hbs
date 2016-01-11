@@ -6,13 +6,13 @@
 {{/each}}
 
 <div class="page-header">
-    <h1>Bejelentett hibáim</h1>
+    <h1>Bejelentett Teendők</h1>
 </div>
 
 {{error-list errors=model}}
 
 <p>
-    <button {{action "showModal" "new-error-modal" "errors.list"}} class="btn btn-default">Új hiba felvitele</button>
+    <button {{action "showModal" "new-error-modal" "errors.list"}} class="btn btn-default">Új teendő felvitele</button>
     {{!--{{link-to "Új hiba felvitele" "errors.new" class="btn btn-default"}}--}}
 </p>
 

@@ -3,7 +3,7 @@
         <div class="form-group {{if errors.location "has-error"}}">
             <label for="helyszin" class="col-lg-2 control-label">Helyszín</label>
             <div class="col-lg-10">
-                <input class="form-control" id="helyszin" name="helyszin" placeholder="pl. PC6, Lovarda, 2. emeleti folyosó..." type="text" value="{{data.location}}">
+                <input class="form-control" id="helyszin" name="helyszin" placeholder="pl. takarítás, pakolás..." type="text" value="{{data.todo}}">
                 <span class="help-block">{{errors.location}}</span>
             </div>
         </div>
@@ -11,7 +11,7 @@
             <label for="leiras" class="col-lg-2 control-label">Leírás</label>
             <div class="col-lg-10">
                 <textarea class="form-control" rows="3" id="leiras" name="leiras" value="{{data.description}}"></textarea>
-                <span class="help-block">Meg kell adni a helyszínt, ha pedig konkrét géppel van probléma, akkor azt is.</span>
+                <span class="help-block">Add meg a feladat bővebb leirását.</span>
                 <span class="help-block">{{errors.description}}</span>
             </div>
         </div>

@@ -10,7 +10,7 @@ export default Ember.Component.extend({
                 return;
             }
             this.get('onSave')({
-                location: this.$('#helyszin').val(),
+                todo: this.$('#helyszin').val(),
                 description: this.$('#leiras').val(),
                 date: new Date().toLocaleString(),
                 
@@ -23,7 +23,7 @@ export default Ember.Component.extend({
         var location = this.$('#helyszin').val();
         var description = this.$('#leiras').val();
         
-        this.set('errors.location', location === '' ? 'Név kötelező' : '');
+        this.set('errors.location', location === '' ? 'Teendő kötelező' : '');
         this.set('errors.description', description === '' ? 'Leírás kötelező' : '');
         
         return this.get('errors.location') === '' &&
