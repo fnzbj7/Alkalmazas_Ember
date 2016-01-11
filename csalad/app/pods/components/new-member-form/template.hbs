@@ -1,0 +1,32 @@
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group {{if members.location "has-error"}}">
+            <label for="lastname" class="col-lg-2 control-label">Vezetéknév</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="lastname" name="lastname" placeholder="Kérem adja meg a vezetéknevét" type="text" value="{{data.lastname}}">
+                <span class="help-block">{{members.location}}</span>
+            </div>
+        </div>
+        <div class="form-group {{if members.location "has-error"}}">
+            <label for="firstname" class="col-lg-2 control-label">Keresztnév</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="firstname" name="firstname" placeholder="Kérem adja meg a keresztnevet" type="text" value="{{data.firstname}}">
+                <span class="help-block">{{members.location}}</span>
+            </div>
+        </div>
+        <div class="form-group {{if members.location "has-error"}}">
+            <label for="age" class="col-lg-2 control-label">Kor</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="age" name="age" placeholder="Kérem adja meg a korát" type="text" value="{{data.age}}">
+                <span class="help-block">{{members.location}}</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button {{action "submit"}} class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>        

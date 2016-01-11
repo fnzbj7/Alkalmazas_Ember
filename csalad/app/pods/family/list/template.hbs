@@ -1,0 +1,10 @@
+<div class="page-header">
+    <h1>Felvett családtagok</h1>
+</div>
+
+{{family-list familymembers=model}}
+
+<p>
+    <button {{action "showModal" "new-member-modal" "family.list"}} class="btn btn-default">Új hiba felvitele</button>
+    {{!--{{link-to "Új hiba felvitele" "errors.new" class="btn btn-default"}}--}}
+</p>

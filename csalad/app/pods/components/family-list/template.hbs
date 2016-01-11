@@ -1,0 +1,23 @@
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>Vezetéknév</th>
+            <th>Keresztnév</th>
+            <th>Funkciók</th>
+        </tr>   
+    </thead>
+    <tbody>
+
+        {{#each familymembers as |member|}}
+        <tr>
+            <td>{{member.lastname}}</td>
+            <td>{{member.firstname}}</td>
+            <td>
+                {{link-to "Megtekint" "family.view" member class="btn btn-default btn-sm"}}
+                {{link-to "Szerkeszt" "family.edit" member class="btn btn-default btn-sm"}}
+                <button {{action "deleteMember" member}} class="btn btn-default btn-sm">Töröl</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
